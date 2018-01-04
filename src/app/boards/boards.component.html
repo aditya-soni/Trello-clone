@@ -1,0 +1,8 @@
+<div class="col-xs-4 create">
+    <div *ngIf="!creatingMode;" class="createBoard" (click)="creatingMode= !creatingMode" >Create a new board</div>
+    <div *ngIf="creatingMode">
+    <app-create-board (closeButtonClicked)="creatingMode= !creatingMode" ></app-create-board>
+    </div>
+</div>
+<!-- <hr> -->
+<app-board-list></app-board-list>

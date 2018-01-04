@@ -1,0 +1,3 @@
+<div *ngFor="let board of boards; let i=index" class="board-item col-xs-6 col-sm-6 col-md-4 col-lg-4" [routerLink]="['/b',i]">
+  {{board.name}}
+</div>

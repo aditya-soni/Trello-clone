@@ -1,0 +1,12 @@
+<h4>Creating Board</h4>
+<hr>
+<form  [formGroup]='createBoardForm' (ngSubmit)="addBoard()" >
+  <div class="form-group">
+  <!-- <label for="title">Title :</label> -->
+  <input placeholder="Board Title" type="text" class="form-control" formControlName='title' #title>
+  </div>
+  <div class="buttons">
+    <button class="btn btn-danger" type="button" (click)="closeForm()">Cancel</button>
+  <button class="btn btn-primary" type="submit" [disabled]="!createBoardForm.get('title').valid" >Create</button>
+  </div>
+</form>
